@@ -4,6 +4,10 @@ Created on Wed Mar 21 17:34:11 2018
 
 @author: ciullo
 """
+
+from __future__ import (unicode_literals, print_function, absolute_import,
+                        division)
+
 from ema_workbench import (Model, CategoricalParameter,
                            ScalarOutcome, IntegerParameter, RealParameter)
 from dike_model_function import DikeNetwork  # @UnresolvedImport
@@ -61,7 +65,7 @@ def get_model_for_problem_formulation(problem_formulation_id):
     # Early Warning System lever
     for lev_name in EWS_lev.keys():
         levers.append(IntegerParameter(lev_name, EWS_lev[lev_name][0],
-                                       EWS_lev[lev_name][1]))
+                                      EWS_lev[lev_name][1]))
     
     for dike in function.dikelist:
         # uncertainties in the form: locationName_uncertaintyName
@@ -264,9 +268,7 @@ def get_model_for_problem_formulation(problem_formulation_id):
         dike_model.outcomes = outcomes
         
     else:
-        raise TypeError('unknownx identifier')
+        raise TypeError('unknonw identifier')
         
     return dike_model, function.planning_steps
 
-if __name__ == '__main__':
-    get_model_for_problem_formulation(3)

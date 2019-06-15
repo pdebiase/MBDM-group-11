@@ -7,22 +7,15 @@ Authors: A. Werntges, H. Cheng, G. Papazotos, R. Patel, P. De Biase
 
 The analysis is presented in Jupyter Notebooks on the top level. The performed experiments are stored under ./results. 
 
+```
 project/
-
 │   Open exploration Uncertainties.ipynb
-
 │   Open exploration Levers.ipynb
-
 │   ...
-
 │
-
 ├───data
-
 │       ...
-
 │
-
 ├───results
-
 │       ...
+```

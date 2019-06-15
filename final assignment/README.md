@@ -4,12 +4,21 @@
 Authors: A. Werntges, H. Cheng, G. Papazotos, R. Patel, P. De Biase
 
 project/
+
 │   Open exploration Uncertainties.ipynb
+
 │   Open exploration Levers.ipynb
+
 │   ...
+
 │
+
 ├───data
+
 │       ...
+
 │
+
 ├───results
+
 │       ...

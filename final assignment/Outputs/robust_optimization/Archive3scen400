@@ -1,0 +1,6 @@
+,0_RfR 0,0_RfR 1,0_RfR 2,1_RfR 0,1_RfR 1,1_RfR 2,2_RfR 0,2_RfR 1,2_RfR 2,3_RfR 0,3_RfR 1,3_RfR 2,4_RfR 0,4_RfR 1,4_RfR 2,EWS_DaysToThreat,A.1_DikeIncrease 0,A.1_DikeIncrease 1,A.1_DikeIncrease 2,A.2_DikeIncrease 0,A.2_DikeIncrease 1,A.2_DikeIncrease 2,A.3_DikeIncrease 0,A.3_DikeIncrease 1,A.3_DikeIncrease 2,A.4_DikeIncrease 0,A.4_DikeIncrease 1,A.4_DikeIncrease 2,A.5_DikeIncrease 0,A.5_DikeIncrease 1,A.5_DikeIncrease 2,Expected Number of Deaths,Expected Annual Damage,Total Investment Costs
+0,0,0,0,0,0,0,1,0,1,0,1,1,0,0,0,1,9,0,9,6,0,1,6,1,5,3,5,6,8,1,6,0.3333333333333333,0.6666666666666666,0.8828158796278753
+1,1,1,1,0,0,0,1,1,1,0,1,0,0,0,0,3,0,5,0,10,3,1,4,4,5,8,2,2,7,0,6,0.6666666666666666,0.6666666666666666,0.9721361869782058
+2,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,3,5,1,6,9,4,0,0,10,5,1,7,1,7,7,0,0.0,0.0,0.6949860504087146
+3,1,0,0,0,1,0,1,0,1,1,0,0,0,0,0,1,6,6,4,8,3,7,4,8,1,10,1,0,7,7,7,1.0,1.0,1.2410835573024714
+4,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,3,5,10,0,6,3,5,2,6,9,10,6,0,2,5,2,0.3333333333333333,0.3333333333333333,0.7719180852463372

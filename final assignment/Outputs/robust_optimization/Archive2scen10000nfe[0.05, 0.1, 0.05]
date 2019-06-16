@@ -1,0 +1,4 @@
+,0_RfR 0,1_RfR 0,2_RfR 0,3_RfR 0,4_RfR 0,EWS_DaysToThreat,A.1_DikeIncrease 0,A.2_DikeIncrease 0,A.3_DikeIncrease 0,A.4_DikeIncrease 0,A.5_DikeIncrease 0,Robustness metric Deaths,Robustness metric Damage,Robustness metric Costs
+0,0,0,0,0,0,2,6,8,6,5,9,1.0,1.0,0.2375762960759219
+1,0,0,0,0,0,0,0,8,6,5,6,0.5,0.5,0.16401865289966897
+2,0,0,0,0,0,0,0,0,0,1,0,0.0,0.0,0.006320800309666243

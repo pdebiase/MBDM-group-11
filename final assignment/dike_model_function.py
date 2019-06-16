@@ -25,7 +25,7 @@ def Muskingum(C1, C2, C3, Qn0_t1, Qn0_t0, Qn1_t0):
 class DikeNetwork(object):
     def __init__(self):
         # planning steps
-        self.num_planning_steps = 3
+        self.num_planning_steps = 1
         self.num_events = 30
         
         # load network

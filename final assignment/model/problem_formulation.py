@@ -6,18 +6,18 @@ Created on Wed Mar 21 17:34:11 2018
 """
 from ema_workbench import (Model, CategoricalParameter,
                            ScalarOutcome, IntegerParameter, RealParameter)
-from dike_model_function import DikeNetwork  # @UnresolvedImport
+from model.dike_model_function import DikeNetwork  # @UnresolvedImport
 
 
 def sum_over(*args):
     return sum(args)
 
-def get_model_for_problem_formulation(problem_formulation_id):
+def get_model_for_problem_formulation(problem_formulation_id, planning_steps=3):
     ''' Prepare DikeNetwork in a way it can be input in the EMA-workbench.
     Specify uncertainties, levers and problem formulation.
     '''
     # Load the model:
-    function = DikeNetwork()
+    function = DikeNetwork(num_planning_steps=planning_steps)
     # workbench model:
     dike_model = Model('dikesnet', function=function)
 

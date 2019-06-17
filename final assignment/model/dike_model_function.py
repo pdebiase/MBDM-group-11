@@ -8,10 +8,10 @@ from __future__ import division
 from copy import deepcopy
 from ema_workbench import ema_logging
 
-import funs_generate_network
-from funs_dikes import Lookuplin, dikefailure, init_node
-from funs_economy import cost_fun, discount, cost_evacuation
-from funs_hydrostat import werklijn_cdf, werklijn_inv
+import model.funs_generate_network as funs_generate_network
+from model.funs_dikes import Lookuplin, dikefailure, init_node
+from model.funs_economy import cost_fun, discount, cost_evacuation
+from model.funs_hydrostat import werklijn_cdf, werklijn_inv
 import numpy as np
 import pandas as pd
 
@@ -23,9 +23,9 @@ def Muskingum(C1, C2, C3, Qn0_t1, Qn0_t0, Qn1_t0):
 
 
 class DikeNetwork(object):
-    def __init__(self):
+    def __init__(self, num_planning_steps=3):
         # planning steps
-        self.num_planning_steps = 3
+        self.num_planning_steps = num_planning_steps
         self.num_events = 30
         
         # load network

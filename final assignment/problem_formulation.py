@@ -36,13 +36,13 @@ def get_model_for_problem_formulation(problem_formulation_id):
     
     Int_uncert = {'A.0_ID flood wave shape': [0, 132]}
     # Range of dike heightening:
-    dike_lev = {'DikeIncrease1': [0, 10], 'DikeIncrease2': [0,3]}    # dm
+    dike_lev = {'DikeIncrease': [0, 10]}    # dm
 
     # Series of five Room for the River projects:
     rfr_lev = ['{}_RfR'.format(project_id) for project_id in range(0, 5)]
 
     # Time of warning: 0, 1, 2, 3, 4 days ahead from the flood
-#     EWS_lev = {'EWS_DaysToThreat': [0, 4]}  # days
+    EWS_lev = {'EWS_DaysToThreat': [0, 4]}  # days
 
     uncertainties = []
     levers = []
@@ -65,7 +65,7 @@ def get_model_for_problem_formulation(problem_formulation_id):
     # Early Warning System lever
     for lev_name in EWS_lev.keys():
         levers.append(IntegerParameter(lev_name, EWS_lev[lev_name][0],
-                                      EWS_lev[lev_name][1]))
+                                       EWS_lev[lev_name][1]))
     
     for dike in function.dikelist:
         # uncertainties in the form: locationName_uncertaintyName

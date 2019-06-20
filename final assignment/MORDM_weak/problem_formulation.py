@@ -59,9 +59,9 @@ def get_model_for_problem_formulation(problem_formulation_id):
             levers.append(IntegerParameter(lev_name_, 0, 1))
 
     # Early Warning System lever
-    for lev_name in EWS_lev.keys():
-        levers.append(IntegerParameter(lev_name, EWS_lev[lev_name][0],
-                                       EWS_lev[lev_name][1]))
+ #   for lev_name in EWS_lev.keys():
+ #       levers.append(IntegerParameter(lev_name, EWS_lev[lev_name][0],
+ #                                      EWS_lev[lev_name][1]))
     
     for dike in function.dikelist:
         # uncertainties in the form: locationName_uncertaintyName
@@ -76,17 +76,17 @@ def get_model_for_problem_formulation(problem_formulation_id):
             uncertainties.append(CategoricalParameter(name, categories))
 
         # location-related levers in the form: locationName_leversName
-        for lev_name in dike_lev.keys():
-            for n in function.planning_steps:
-                name = "{}_{} {}".format(dike, lev_name, n)
-                levers.append(IntegerParameter(name, dike_lev[lev_name][0],
-                                           dike_lev[lev_name][1]))
+ #       for lev_name in dike_lev.keys():
+ #           for n in function.planning_steps:
+ #               name = "{}_{} {}".format(dike, lev_name, n)
+ #               levers.append(IntegerParameter(name, dike_lev[lev_name][0],
+ #                                          dike_lev[lev_name][1]))
 
     # load uncertainties and levers in dike_model:
     dike_model.uncertainties = uncertainties
 #    dike_model.uncertainties = []
-#    dike_model.levers = levers
-    dike_model.levers = [] 
+    dike_model.levers = levers
+#    dike_model.levers = [] 
     # Problem formulations:
     # Outcomes are all costs, thus they have to minimized:
     direction = ScalarOutcome.MINIMIZE
@@ -109,14 +109,14 @@ def get_model_for_problem_formulation(problem_formulation_id):
             variable_names.extend(['RfR Total Costs {}'.format(n)])
             variable_names.extend(['Expected Evacuation Costs {}'.format(n)])
 
- #       dike_model.outcomes = [ScalarOutcome('All Costs',
- #                                            variable_name=[
- #                                                var for var in variable_names],
- #                                            function=sum_over, kind=direction),
+#        dike_model.outcomes = [ScalarOutcome('All Costs',
+#                                             variable_name=[
+#                                                 var for var in variable_names],
+#                                             function=sum_over, kind=direction),
 
- #                              ScalarOutcome('Expected Number of Deaths',
- #                                            variable_name=[var for var in variable_names_
- #                                            ], function=sum_over, kind=direction)]
+#                               ScalarOutcome('Expected Number of Deaths',
+#                                             variable_name=[var for var in variable_names_
+#                                             ], function=sum_over, kind=direction)]
 
     # 3-objectives PF:
     elif problem_formulation_id == 1:

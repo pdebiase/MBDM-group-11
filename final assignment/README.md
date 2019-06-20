@@ -17,6 +17,9 @@ project/
 ├───data
 │       ...
 │
+├───model
+│       ...
+│
 ├───results
 │       ...
 ```

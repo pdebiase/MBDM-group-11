@@ -1,0 +1,5 @@
+,0_RfR 0,0_RfR 1,0_RfR 2,1_RfR 0,1_RfR 1,1_RfR 2,2_RfR 0,2_RfR 1,2_RfR 2,3_RfR 0,3_RfR 1,3_RfR 2,4_RfR 0,4_RfR 1,4_RfR 2,EWS_DaysToThreat,A.1_DikeIncrease 0,A.1_DikeIncrease 1,A.1_DikeIncrease 2,A.2_DikeIncrease 0,A.2_DikeIncrease 1,A.2_DikeIncrease 2,A.3_DikeIncrease 0,A.3_DikeIncrease 1,A.3_DikeIncrease 2,A.4_DikeIncrease 0,A.4_DikeIncrease 1,A.4_DikeIncrease 2,A.5_DikeIncrease 0,A.5_DikeIncrease 1,A.5_DikeIncrease 2,Expected Number of Deaths,Expected Annual Damage,Total Investment Costs
+0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,4,3,10,8,6,3,7,9,4,0,2,6,5,4,2,3,0.9833333333333333,0.06666666666666667,0.818321360488757
+1,0,1,0,0,1,1,0,0,1,1,0,0,1,0,0,2,5,2,6,9,6,5,8,10,2,7,1,0,9,1,0,1.0,0.8833333333333333,1.6257342364807028
+2,0,0,0,0,1,0,1,0,1,0,0,1,0,0,0,4,3,2,7,5,3,9,10,4,6,10,1,4,4,3,0,0.9666666666666667,0.43333333333333335,1.0410279323324487
+3,0,0,0,1,0,0,0,0,0,1,0,0,1,0,0,3,4,5,2,5,10,0,10,1,1,8,7,6,9,10,6,1.0,0.65,1.2979266416087558

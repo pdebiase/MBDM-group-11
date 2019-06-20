@@ -4,20 +4,24 @@ Created on Wed Mar 21 17:34:11 2018
 
 @author: ciullo
 """
+
+from __future__ import (unicode_literals, print_function, absolute_import,
+                        division)
+
 from ema_workbench import (Model, CategoricalParameter,
                            ScalarOutcome, IntegerParameter, RealParameter)
-from model.dike_model_function import DikeNetwork  # @UnresolvedImport
+from dike_model_function import DikeNetwork  # @UnresolvedImport
 
 
 def sum_over(*args):
     return sum(args)
 
-def get_model_for_problem_formulation(problem_formulation_id, planning_steps=3):
+def get_model_for_problem_formulation(problem_formulation_id):
     ''' Prepare DikeNetwork in a way it can be input in the EMA-workbench.
     Specify uncertainties, levers and problem formulation.
     '''
     # Load the model:
-    function = DikeNetwork(num_planning_steps=planning_steps)
+    function = DikeNetwork()
     # workbench model:
     dike_model = Model('dikesnet', function=function)
 
@@ -61,7 +65,7 @@ def get_model_for_problem_formulation(problem_formulation_id, planning_steps=3):
     # Early Warning System lever
     for lev_name in EWS_lev.keys():
         levers.append(IntegerParameter(lev_name, EWS_lev[lev_name][0],
-                                       EWS_lev[lev_name][1]))
+                                      EWS_lev[lev_name][1]))
     
     for dike in function.dikelist:
         # uncertainties in the form: locationName_uncertaintyName
@@ -244,7 +248,6 @@ def get_model_for_problem_formulation(problem_formulation_id, planning_steps=3):
                                           kind=direction))
             outcomes.append(ScalarOutcome('Expected Evacuation Costs {}'.format(n),
                                           kind=direction))
-            
 
         dike_model.outcomes = outcomes
         
@@ -263,12 +266,9 @@ def get_model_for_problem_formulation(problem_formulation_id, planning_steps=3):
             outcomes.append(ScalarOutcome('RfR Total Costs {}'.format(n), kind=direction))
             outcomes.append(ScalarOutcome('Expected Evacuation Costs {}'.format(n), kind=direction))
         dike_model.outcomes = outcomes
-        print(outcomes)
-         
+        
     else:
-        raise TypeError('unknownx identifier')
+        raise TypeError('unknonw identifier')
         
     return dike_model, function.planning_steps
 
-if __name__ == '__main__':
-    get_model_for_problem_formulation(3)

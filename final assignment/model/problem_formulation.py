@@ -244,6 +244,7 @@ def get_model_for_problem_formulation(problem_formulation_id, planning_steps=3):
                                           kind=direction))
             outcomes.append(ScalarOutcome('Expected Evacuation Costs {}'.format(n),
                                           kind=direction))
+            
 
         dike_model.outcomes = outcomes
         
@@ -262,7 +263,7 @@ def get_model_for_problem_formulation(problem_formulation_id, planning_steps=3):
             outcomes.append(ScalarOutcome('RfR Total Costs {}'.format(n), kind=direction))
             outcomes.append(ScalarOutcome('Expected Evacuation Costs {}'.format(n), kind=direction))
         dike_model.outcomes = outcomes
-        
+         
     else:
         raise TypeError('unknownx identifier')
         

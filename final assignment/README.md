@@ -11,9 +11,13 @@ The analysis is presented in Jupyter Notebooks on the top level. The performed e
 project/
 │   Open exploration Uncertainties.ipynb
 │   Open exploration Levers.ipynb
+│   SOBOL Analysis.ipynb
 │   ...
 │
 ├───data
+│       ...
+│
+├───model
 │       ...
 │
 ├───results

@@ -12,12 +12,12 @@ from model.dike_model_function import DikeNetwork  # @UnresolvedImport
 def sum_over(*args):
     return sum(args)
 
-def get_model_for_problem_formulation1(problem_formulation_id):
+def get_model_for_problem_formulation_anslysis(problem_formulation_id, planning_steps=3):
     ''' Prepare DikeNetwork in a way it can be input in the EMA-workbench.
     Specify uncertainties, levers and problem formulation.
     '''
     # Load the model:
-    function = DikeNetwork()
+    function = DikeNetwork(num_planning_steps=planning_steps)
     # workbench model:
     dike_model = Model('dikesnet', function=function)
 

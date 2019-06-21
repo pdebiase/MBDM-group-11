@@ -12,6 +12,7 @@ project/
 │   Open exploration Uncertainties.ipynb
 │   Open exploration Levers.ipynb
 │   SOBOL Analysis.ipynb
+│   MORO.ipynb
 │   ...
 │
 ├───data

@@ -24,3 +24,12 @@ project/
 ├───results
 │       ...
 ```
+
+## Requirements
+
+Packages to installed:
+
+- pandas (version 0.24)
+- ema-workbench
+- platypus-opt
+- SALib

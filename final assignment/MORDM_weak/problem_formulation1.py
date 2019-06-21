@@ -53,10 +53,10 @@ def get_model_for_problem_formulation1(problem_formulation_id):
                                               Int_uncert[uncert_name][1]))    
 
     # RfR levers can be either 0 (not implemented) or 1 (implemented)
-#    for lev_name in rfr_lev:
-#        for n in function.planning_steps:
-#            lev_name_ = '{} {}'.format(lev_name, n)
-#            levers.append(IntegerParameter(lev_name_, 0, 1))
+ #   for lev_name in rfr_lev:
+ #       for n in function.planning_steps:
+ #           lev_name_ = '{} {}'.format(lev_name, n)
+ #           levers.append(IntegerParameter(lev_name_, 0, 1))
 
     # Early Warning System lever
 #    for lev_name in EWS_lev.keys():
@@ -76,11 +76,11 @@ def get_model_for_problem_formulation1(problem_formulation_id):
             uncertainties.append(CategoricalParameter(name, categories))
 
         # location-related levers in the form: locationName_leversName
-#        for lev_name in dike_lev.keys():
-#            for n in function.planning_steps:
-#                name = "{}_{} {}".format(dike, lev_name, n)
-#                levers.append(IntegerParameter(name, dike_lev[lev_name][0],
-#                                           dike_lev[lev_name][1]))
+ #       for lev_name in dike_lev.keys():
+ #           for n in function.planning_steps:
+ #               name = "{}_{} {}".format(dike, lev_name, n)
+ #               levers.append(IntegerParameter(name, dike_lev[lev_name][0],
+ #                                          dike_lev[lev_name][1]))
 
     # load uncertainties and levers in dike_model:
     dike_model.uncertainties = uncertainties
@@ -137,17 +137,17 @@ def get_model_for_problem_formulation1(problem_formulation_id):
 
             
         dike_model.outcomes = [
-#                    ScalarOutcome('Expected Annual Damage',
-#                          variable_name=[var for var in variable_names],
-#                          function=sum_over, kind=direction),
+                    ScalarOutcome('Expected Annual Damage',
+                          variable_name=[var for var in variable_names],
+                          function=sum_over, kind=direction),
 
                 ScalarOutcome('Total Investment Costs',
                           variable_name=[var for var in variable_names_],
-                          function=sum_over, kind=direction)]
+                          function=sum_over, kind=direction),
 
-#                ScalarOutcome('Expected Number of Deaths',
-#                          variable_name=[var for var in variable_names__],
-#                          function=sum_over, kind=direction)]
+                ScalarOutcome('Expected Number of Deaths',
+                          variable_name=[var for var in variable_names__],
+                          function=sum_over, kind=direction)]
 
     # 5-objectives PF:
     elif problem_formulation_id == 2:
